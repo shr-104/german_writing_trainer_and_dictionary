@@ -311,6 +311,8 @@ This app is intended for **localhost** use. When you enable OpenRouter, prompts 
 - Export attempts to PDF/Markdown
 - Audio TTS/ASR for dict examples
 - Custom rubrics / more criteria
+- Higher Geothe-level tasks generation (and A1 if I have time) later when I reach that!
+- Lesen, Hören, Sprachen later too!
 
 ---
 
