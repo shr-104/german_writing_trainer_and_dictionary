@@ -4,6 +4,8 @@ A local-first web app to practice **Goethe A2 Schreiben**.
 It generates exam-style tasks (Teil 1 / Teil 2), lets you write answers, evaluates them with an LLM, shows **colored score bars** by criterion, and saves everything to history.  
 It also ships with a **Dictionary & Chat** tool (plus its own history) for quick lookups, verb tables, translations, synonyms/antonyms, etc.
 
+**Disclaimer**: almost fully vibe coding with just a little hand coding!!!
+
 ---
 
 ## Features
