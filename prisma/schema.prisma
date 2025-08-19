@@ -1,0 +1,45 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model PromptTemplate {
+  id        String   @id @default(cuid())
+  name      String   @unique
+  content   String
+  createdAt DateTime @default(now())
+}
+
+model Task {
+  id        String   @id @default(cuid())
+  teil      Int
+  topic     String
+  prompt    String
+  taskText  String
+  createdAt DateTime @default(now())
+  attempts  Attempt[]
+}
+
+model Attempt {
+  id          String   @id @default(cuid())
+  taskId      String
+  userAnswer  String
+  evaluation  String   // JSON string
+  scores      String   // JSON string (e.g. {"Inhalt":90,...})
+  createdAt   DateTime @default(now())
+  task        Task     @relation(fields: [taskId], references: [id], onDelete: Cascade)
+}
+
+model LexLog {
+  id        String   @id @default(cuid())
+  mode      String
+  text      String
+  result    String   // JSON serialized
+  model     String?  // which LLM was used
+  createdAt DateTime @default(now())
+  // optional: language, userId, etc.
+}
