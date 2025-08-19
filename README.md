@@ -1,4 +1,4 @@
-# A2 Schreibtrainer (Next.js + Tailwind v4 + Prisma + OpenRouter)
+# A2 Schreibtrainer
 
 A local-first web app to practice **Goethe A2 Schreiben**.  
 It generates exam-style tasks (Teil 1 / Teil 2), lets you write answers, evaluates them with an LLM, shows **colored score bars** by criterion, and saves everything to history.  
